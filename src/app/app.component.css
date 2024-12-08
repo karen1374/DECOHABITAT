@@ -1,0 +1,39 @@
+.colorBarra{
+    background-color: #355F2E;
+}
+
+/* Fijar la barra de navegación principal */
+.navbar-fixed {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+  }
+  
+  /* Fijar el menú lateral */
+  .sidenav.fixed {
+    position: fixed;
+    top: 64px; /* Altura de la barra de navegación principal */
+    height: calc(100% - 64px); /* Ajustar al espacio disponible */
+    z-index: 999; /* Justo debajo de la barra principal */
+  }
+  
+  /* Ajustar el contenido principal para que no quede superpuesto */
+  body {
+    margin-top: 64px; /* Altura de la barra de navegación principal */
+    margin-left: 240px; /* Ancho del menú lateral fijo */
+  }
+  
+  @media screen and (max-width: 992px) {
+    /* Para dispositivos pequeños: el menú lateral no ocupa espacio fijo */
+    body {
+      margin-left: 0;
+    }
+    .sidenav.fixed {
+      position: fixed;
+      height: 100%;
+      top: 0;
+    }
+  }
+  

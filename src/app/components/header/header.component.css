@@ -1,0 +1,244 @@
+header {
+    position: relative;
+    background-color: black;
+    height: 75vh;
+    min-height: 25rem;
+    width: 100%;
+    overflow: hidden;
+  }
+  
+  header video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: 0;
+    -ms-transform: translateX(-50%) translateY(-50%);
+    -moz-transform: translateX(-50%) translateY(-50%);
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%);
+  }
+  
+  header .container {
+    position: relative;
+    z-index: 2;
+  }
+  
+  header .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: black;
+    opacity: 0.5;
+    z-index: 1;
+  }
+  
+  /* Media Query for devices withi coarse pointers and no hover functionality */
+  
+  /* This will use a fallback image instead of a video for devices that commonly do not support the HTML5 video element */
+  
+  @media (pointer: coarse) and (hover: none) {
+    header {
+      background: url('https://source.unsplash.com/XT5OInaElMw/1600x900') black no-repeat center center scroll;
+    }
+  
+    header video {
+      display: none;
+    }
+  }
+
+
+  parallax {
+    /* The image used */
+    background-image: url("../../../../public/img/deco3.jpeg");
+  
+    /* Set a specific height */
+    min-height: 500px;
+  
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .parallax2 {
+    /* The image used */
+    background-image: url("../../../../public/img/deco2.jpeg");
+  
+    /* Set a specific height */
+    min-height: 500px;
+  
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .icon-block img {
+    width: 70px;
+    height: 70px;
+    margin-bottom: 15px;
+    border-radius: 50%; /* Asegura que sea circular */
+    border: 2px solid green; /* Borde verde */
+    box-shadow: 0 0 15px 5px rgba(0, 255, 0, 0.5); /* Iluminación verde permanente */
+  }
+
+  /* Estilo exclusivo para la sección "Sobre Nosotros" */
+.sobre-nosotros {
+  padding: 50px 20px;
+  text-align: center;
+}
+
+.sobre-nosotros h2 {
+  color: #FFFFFF; /* Blanco puro */
+  font-size: 2.8rem;
+  font-weight: bold;
+}
+
+.sobre-nosotros img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%; /* Íconos redondeados */
+  box-shadow: none; /* Sin sombras ni bordes */
+  transition: transform 0.3s ease; /* Efecto de zoom suave */
+}
+
+.sobre-nosotros img:hover {
+  transform: scale(1.1); /* Efecto de zoom al pasar el mouse */
+}
+
+.sobre-nosotros h5 {
+  color: #FFFFFF; /* Blanco puro */
+  font-size: 1.6rem;
+  margin-top: 15px;
+}
+
+.sobre-nosotros p {
+  color: #F5F5F5; /* Blanco ligeramente atenuado */
+  font-size: 1.2rem;
+  line-height: 1.6;
+  margin: 10px 15px;
+}
+
+.sobre-nosotros .row {
+  margin-top: 30px;
+}
+
+/* Estilos de header */
+
+
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.modern-header {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  background: linear-gradient(135deg, #3eaf7c, #2c3e50);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.header-content {
+  text-align: center;
+  z-index: 10;
+  max-width: 800px;
+  padding: 0 20px;
+}
+
+.header-title {
+  font-size: 4rem;
+  margin-bottom: 20px;
+  font-weight: 700;
+  animation: fadeInDown 1.5s ease;
+}
+
+.header-subtitle {
+  font-size: 1.5rem;
+  margin-bottom: 30px;
+  font-weight: 300;
+  animation: fadeInUp 1.5s ease;
+}
+
+.header-btn {
+  display: inline-block;
+  padding: 12px 30px;
+  background-color: #ffffff;
+  color: #3eaf7c;
+  text-decoration: none;
+  border-radius: 50px;
+  font-weight: bold;
+  transition: all 0.3s ease;
+  animation: pulse 2s infinite;
+}
+
+.header-btn:hover {
+  background-color: #3eaf7c;
+  color: white;
+  transform: scale(1.05);
+}
+
+.bubbles-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+.bubble {
+  position: absolute;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.1);
+  animation: float 10s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-30px); }
+}
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+  100% { transform: scale(1); }
+}
+
+
+  
+  
+  

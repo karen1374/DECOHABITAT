@@ -1,0 +1,87 @@
+<section id="formulario">
+    <form>
+      <div class="container">
+        <div class="row">
+          <div class="col s12 center-align">
+            <h1>Formulario de Contacto</h1>
+          </div>
+          <div class="col s12">
+            <span>Los campos marcados con <span class="red-text">*</span> son obligatorios</span>
+          </div>
+        </div>
+  
+        <!-- Campo: Nombre -->
+        <div class="row">
+          <div class="col s12 input-field">
+            <input type="text" name="nombre" id="nombre" pattern="[A-Za-z\s]{3,50}" required [(ngModel)]="nombreCompleto">
+            <label for="nombre"><span class="red-text">*</span> {{nombre}}</label>
+          </div>
+        </div>
+  
+        <!-- Campo: Email -->
+        <div class="row">
+          <div class="col s12 input-field">
+            <input type="email" name="email" id="email" required>
+            <label for="email"><span class="red-text">*</span>{{email}}</label>
+          </div>
+        </div>
+  
+        <!-- Campo: Teléfono -->
+        <div class="row">
+          <div class="col s12 input-field">
+            <input type="text" name="telefono" id="telefono" pattern="[0-9]{10}" required>
+            <label for="telefono"><span class="red-text">*</span>{{telefono}}</label>
+          </div>
+        </div>
+  
+        <!-- Campo: Motivo de Contacto -->
+        <div class="row">
+          <div class="col s12 input-field">
+            <select name="motivoContacto" id="motivoContacto">
+              <option value="" disabled selected>{{motivo}}</option>
+              <option value="informacion">{{interiorismo}}</option>
+              <option value="costos">{{remodelacion}}</option>
+              <option value="promociones">{{construccion}}</option>
+              <option value="pedidos">{{ decoracion}}</option>
+              <option value="asesoria">{{asesoria}}</option>
+            </select>
+            <label for="motivoContacto">{{motivo}}</label>
+          </div>
+        </div>
+  
+        <!-- Campo: Comentarios -->
+        <div class="row">
+          <div class="col s12 input-field">
+            <textarea name="comentarios" id="comentarios" class="materialize-textarea" pattern="[A-Za-z\s]{200}"></textarea>
+            <label for="comentarios">{{comentarios}}</label>
+          </div>
+        </div>
+  
+        <!-- Campo: Aviso de privacidad -->
+        <div class="row">
+          <div class="col s12">
+            <label for="aviso"><span class="red-text">*</span>{{ aviso}}</label>
+            <div class="switch">
+              <label>
+                No acepto
+                <input type="checkbox" id="aviso" name="aviso">
+                <span class="lever"></span>
+                Acepto
+              </label>
+            </div>
+          </div>
+        </div>
+  
+        <!-- Botones -->
+        <div class="row center-align">
+          <div class="col s6">
+            <input type="submit" value="Guardar" class="btn brown" id="guardar">
+          </div>
+          <div class="col s6">
+            <input type="reset" value="Cancelar" class="btn red">
+          </div>
+        </div>
+      </div>
+    </form>
+  </section>
+  

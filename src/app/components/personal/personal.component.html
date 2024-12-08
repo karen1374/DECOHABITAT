@@ -1,0 +1,24 @@
+<section id="personal">
+  <div class="container">
+    <div class="row">
+      <div class="col s12 center-align">
+        <h1 class="section-title">Nuestro Personal</h1>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col s12 m6 l4 xl3" *ngFor="let persona of personal">
+        <div class="card hoverable">
+          <div class="card-image personal-card">
+            <img [src]="persona.imagen" alt="{{persona.nombre}}" />
+            <span class="card-title">{{persona.nombre}}</span>
+          </div>
+          <div class="card-content center-align">
+            <p class="puesto-text">{{persona.puesto}}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+  

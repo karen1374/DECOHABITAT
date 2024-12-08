@@ -1,0 +1,91 @@
+<div class="modern-header">
+  <div class="header-content">
+    <h1 class="header-title">DecoHabitat</h1>
+    <p class="header-subtitle">Transformamos espacios, creamos sueños</p>
+    <a href="#contacto" class="btn header-btn">EXPLORAR MÁS</a>
+  </div>
+  <div class="bubbles-container">
+    <div *ngFor="let bubble of bubbles" class="bubble" [ngStyle]="getBubbleStyles(bubble)"></div>
+  </div>
+</div>
+
+  <!-- Primer Parallax -->
+<div class="parallax"></div>
+
+
+<div class="section white" id="ventajas">
+  <div class="container">
+    <h2 class="center-align">PRINCIPALES VENTAJAS</h2>
+    <div class="row center-align">
+     
+      <div class="col s12 m6 l3">
+        <div class="icon-block">
+          <img src="img/puntualidad.png" alt="Puntualidad" class="circle responsive-img">
+          <h5>PUNTUALIDAD</h5>
+          <p>Es la principal característica de nuestros servicios, montajes siempre limpios y a tiempo.</p>
+        </div>
+      </div>
+
+   
+      <div class="col s12 m6 l3">
+        <div class="icon-block">
+          <img src="img/like.png" alt="A tu gusto" class="circle responsive-img">
+          <h5>A TU GUSTO</h5>
+          <p>Te ayudamos a realizar el evento a tu gusto, no estamos casados con ideas o conceptos.</p>
+        </div>
+      </div>
+
+ 
+      <div class="col s12 m6 l3">
+        <div class="icon-block">
+          <img src="img/personal.png" alt="Entusiastas" class="circle responsive-img">
+          <h5>ENTUSIASTAS</h5>
+          <p>Personal joven y con mucho entusiasmo te atiende en todo momento.</p>
+        </div>
+      </div>
+
+     
+      <div class="col s12 m6 l3">
+        <div class="icon-block">
+          <img src="img/precios.png" alt="Precio Justo" class="circle responsive-img">
+          <h5>PRECIO JUSTO</h5>
+          <p>Pagas por lo que recibes, una buena producción no debe ser mega costosa.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Segundo Parallax -->
+<div class="parallax2" id="nosotros">
+  <div class="section sobre-nosotros">
+    <div class="container">
+      <h2>Sobre Nosotros</h2>
+      <div class="row">
+        <div class="col s12 m4">
+          <img src="img/mision.png" alt="Misión" />
+          <h5>Nuestra Misión</h5>
+          <p>
+            Crear espacios únicos, funcionales y estéticamente agradables que reflejen la esencia de cada cliente.
+          </p>
+        </div>
+        <div class="col s12 m4">
+          <img src="img/vision.png" alt="Visión" />
+          <h5>Nuestra Visión</h5>
+          <p>
+            Ser la empresa líder en diseño de interiores, reconocida por nuestra creatividad y atención al detalle.
+          </p>
+        </div>
+        <div class="col s12 m4">
+          <img src="img/valores.png" alt="Valores" />
+          <h5>Nuestros Valores</h5>
+          <p>
+            Innovación, profesionalismo y compromiso en cada proyecto que realizamos.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+

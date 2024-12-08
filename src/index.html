@@ -6,8 +6,67 @@
   <base href="/">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      var elems = document.querySelectorAll('.sidenav');
+      var instances = M.Sidenav.init(elems);
+    });
+    $(document).ready(function () {
+      $(".personal-card").hover(
+    function () {
+      $(this).find("img").css({
+        transform: "scale(1.1)",
+      });
+    },
+    function () {
+      $(this).find("img").css({
+        transform: "scale(1)",
+      });
+    }
+  );
+  // Efecto hover solo para escalar las tarjetas
+  $(".categoria-card").hover(
+    function () {
+      $(this).css({
+        transform: "scale(1.05)", // Escalar ligeramente al pasar el mouse
+      });
+    },
+    function () {
+      $(this).css({
+        transform: "scale(1)", // Restaurar escala original
+      });
+    }
+  );
+  $('select').formSelect();
+
+  function randomizeBubbles() {
+    const bubbles = document.querySelectorAll('.bubble');
+    bubbles.forEach(bubble => {
+        bubble.style.width = `${Math.random() * 100}px`;
+        bubble.style.height = bubble.style.width;
+        bubble.style.top = `${Math.random() * 100}%`;
+        bubble.style.left = `${Math.random() * 100}%`;
+    });
+}
+
+// Inicializar burbujas aleatorias
+randomizeBubbles();
+  
+ });
+  </script>
 </head>
 <body>
   <app-root></app-root>
+  <app-header></app-header>
+  <app-personal></app-personal>
+  <app-servicios></app-servicios>
+  <app-galeria></app-galeria>
+  <app-videos></app-videos>
+  <app-formulario></app-formulario>
 </body>
 </html>

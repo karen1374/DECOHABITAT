@@ -1,0 +1,35 @@
+<section class="container-fluid contenedor-galeria" id="galeria">
+
+  <div *ngIf="!categoriaSeleccionada" class="categorias row">
+    
+    <div
+      *ngFor="let categoria of categorias"
+      class="categoria-card col s3"
+      (click)="seleccionarCategoria(categoria)"
+    >
+   
+      <div class="categoria-imagen">
+        <img [src]="categoria.imagen" [alt]="categoria.nombre" />
+      </div>
+    
+      <h4>{{ categoria.nombre }}</h4>
+    </div> 
+  </div> 
+
+ 
+  <div *ngIf="categoriaSeleccionada" class="galeria-categoria">
+    
+    <button class="btn-regresar" (click)="mostrarCategorias()">Regresar</button>
+    
+    <h2>{{ categoriaSeleccionada.nombre }}</h2>
+    
+    <div class="imagenes">
+      <img
+        *ngFor="let imagen of categoriaSeleccionada.imagenes"
+        [src]="imagen"
+        [alt]="categoriaSeleccionada.nombre"
+      />
+    </div> 
+  </div>
+</section> 
+  

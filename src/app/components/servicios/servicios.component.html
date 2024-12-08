@@ -1,0 +1,32 @@
+<section id="servicios">
+  <h1 class="titulo-servicios">Servicios</h1> <!-- Título agregado -->
+  <div class="contenedor-servicios">
+    <div *ngFor="let servicio of servicios" class="tarjeta" 
+         [class.volteada]="servicio.volteada" 
+         (click)="alternarVolteo(servicio)">
+      <div class="tarjeta-inner">
+        <!-- Parte frontal de la tarjeta -->
+        <div class="tarjeta-frontal">
+          <img [src]="servicio.urlImagen" alt="{{ servicio.titulo }}">
+          <h3>{{ servicio.titulo }}</h3>
+        </div>
+        <!-- Parte trasera de la tarjeta -->
+        <div class="tarjeta-trasera" *ngIf="servicio.volteada" 
+             [ngClass]="{'volteada-color': servicio.volteada}">
+          <img [src]="servicio.urlImagen" alt="{{ servicio.titulo }}">
+          <p>{{ servicio.descripcion }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+
+
+
+
+  
+  

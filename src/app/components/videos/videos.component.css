@@ -1,0 +1,83 @@
+.videos-seccion {
+    padding: 50px 0;
+    text-align: center;
+  }
+  
+  .seccion-titulo {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 30px;
+    color: #333;
+  }
+  
+  .videos-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(368px, 1fr)); /* Tamaño fijo para los videos */
+    gap: 30px; /* Espacio entre las tarjetas */
+    justify-items: center; /* Centrado horizontal de las tarjetas */
+    margin-top: 20px;
+    padding: 0 20px; /* Espacio en los lados */
+  }
+  
+  .video-card {
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease-in-out;
+    max-width: 100%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 20px;
+    box-sizing: border-box;
+  }
+  
+  .video-card:hover {
+    transform: translateY(-10px);
+  }
+  
+  .video-frame {
+    position: relative;
+    width: 368px; /* Ancho fijo */
+    height: 656px; /* Alto fijo */
+    background-color: #000;
+    display: flex;
+    justify-content: center;  /* Centrado horizontal */
+    align-items: center;      /* Centrado vertical */
+  }
+  
+  video {
+    width: 100%; /* Ajustar al 100% del contenedor */
+    height: 100%; /* Ajustar al 100% del contenedor */
+    object-fit: cover; /* Asegura que el video cubra todo el área sin distorsión */
+    border-radius: 8px;
+  }
+  
+  .video-titulo {
+    font-size: 1.2rem;
+    font-weight: 500;
+    margin: 15px 0;
+    color: #555;
+    max-width: 90%;
+    word-wrap: break-word;
+  }
+  
+  @media (max-width: 768px) {
+    .videos-grid {
+      grid-template-columns: 1fr; /* Una columna para pantallas pequeñas */
+      padding: 0 10px;
+    }
+  
+    .seccion-titulo {
+      font-size: 1.8rem;
+    }
+  
+    .video-titulo {
+      font-size: 1rem;
+    }
+  }
+  
+  
